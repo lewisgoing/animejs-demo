@@ -1,0 +1,44 @@
+.bento-grid {
+  @apply w-full h-full;
+  background: transparent;
+}
+
+.bento-item {
+  @apply rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-md p-4 transition hover:shadow-lg;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.bento-item > *:not(.drag-handle) {
+  pointer-events: auto;
+}
+
+.drag-handle {
+  @apply text-gray-400 dark:text-gray-500;
+  pointer-events: auto;
+}
+
+.drag-handle:hover {
+  @apply text-gray-600 dark:text-gray-300;
+}
+
+.react-grid-item {
+  transition: all 200ms ease;
+}
+
+.react-grid-item.cssTransforms {
+  transition-property: transform;
+}
+
+.react-grid-item.resizing {
+  z-index: 1;
+  will-change: width, height;
+}
+
+.react-grid-item.react-draggable-dragging {
+  transition: none;
+  z-index: 3;
+  will-change: transform;
+}

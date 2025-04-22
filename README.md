@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+1.  -   `# Bento Grid App A Next.js app showcasing a bento-styled component grid using `react-grid-layout`, featuring an audio visualizer, visualizer parameters, and song play/pause controls. ## Getting Started 1. **Clone the repository**: ```bash git clone <your-repo-url> cd bento-grid-app`
 
-## Getting Started
+2.  **Install dependencies**:
 
-First, run the development server:
+    bash
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+    Copy
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    `npm install`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3.  **Add sample.mp3**:
+    -   Download sample.mp3 from <https://github.com/rafaelreis-hotmart/Audio-Sample-files/blob/master/sample.mp3>.
+    -   Place it in the public/ folder.
+4.  **Run the development server**:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    bash
 
-## Learn More
+    Copy
 
-To learn more about Next.js, take a look at the following resources:
+    `npm run dev`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    Open <http://localhost:3000> to view the app.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Features
+--------
 
-## Deploy on Vercel
+-   **AudioVisualizer**: A 1x2 grid component using Anime.js 4.0 to animate bars based on audio frequencies.
+-   **VisualizerParameters**: A 1x1 component to adjust visualizer bar width and color.
+-   **SongPlayPause**: A 1x1 component to play/pause a sample MP3 using Web Audio API.
+-   **Styling**: Tailwind CSS with a bento-box aesthetic (rounded corners, shadows).
+-   **Grid**: Built with react-grid-layout for a static, responsive layout.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Dependencies
+------------
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+-   Next.js 14.2.3
+-   React 18
+-   react-grid-layout 1.4.4
+-   animejs 4.0.1
+-   Tailwind CSS 3.4.1
+
+Notes
+-----
+
+-   The grid is static (non-draggable/resizable) for simplicity.
+-   The visualizer uses the Web Audio API for real-time audio analysis.
+-   Ensure sample.mp3 is in the public/ folder before running the app.
+
+License
+-------
+
+MIT
